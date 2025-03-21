@@ -1,0 +1,180 @@
+{
+  "options": {
+    "environments": [
+      {
+        "name": "TraceBot Lab",
+        "value": "tracebot_lab",
+        "img": "https://github.com/fkenghagho/NeemHub/blob/main/img/TraceBotLab.png?raw=true"}, 
+      {
+        "name": "AICOR UoB Appartment",
+        "value": "apartment",
+        "img": "https://intel4coro.github.io/coai-vib/img/apartment.png"}, 
+      {
+        "name": "AICOR UoB Lab",
+        "value": "aicor_uob_lab",
+        "img": "https://github.com/fkenghagho/NeemHub/blob/main/img/AICORLab.png?raw=true"}  
+        
+    ],
+    "robots": [
+    
+      {
+        "name": "CEA TraceBot",
+        "value": "cea_tracebot",
+        "img": "https://github.com/fkenghagho/NeemHub/blob/main/img/EnvironmentModel.png?raw=true"
+      },
+      {
+        "name": "Robotiq TraceBot",
+        "value": "robotiq_tracebot",
+        "img": "https://github.com/fkenghagho/NeemHub/blob/main/img/RobotiqTraceBot.png?raw=true"
+      },
+      {
+        "name": "Tracy",
+        "value": "tracy",
+        "img": "https://github.com/fkenghagho/NeemHub/blob/main/img/RobotiqTraceBot.png?raw=true"
+      },
+      {
+        "name": "PR2",
+        "value": "pr2",
+        "img": "https://intel4coro.github.io/coai-vib/img/pr2_urdf_white1.png",
+        "knowledge_bases": "https://data.open-ease.org/QA?neem_id=6526790ced1a1bfc415a1d38&q=findall%28%5BDuration%2C%20Evt%5D%2C%0A%20%20%28%20%20event_interval%28Evt%2C%20Begin%2C%20End%29%2C%0A%20%20%20%20%20number%28End%29%2C%0A%20%20%20%20%20Duration%20is%20End%20-%20Begin%0A%20%20%29%2C%0A%20%20Durations%29%2C%0Amax_member%28%5BMaxDuration%2C%20LongestEvt%5D%2C%20Durations%29"
+      }
+    ],
+    "tasks": [
+        {
+        "name": "Canister Insertion Into Drain Tray",
+        "value": "ci_process"
+        },
+        {
+        "name": "Needle Insertion Into Bottle",
+        "value": "ni_process"
+        },
+        {
+        "name": "Tube Insertion Into Pump Holde",
+        "value": "ti_process"
+        },
+        {
+        "name": "Bottle Insertion Into Pump Holder",
+        "value": "bi_process"
+        }
+        ,
+        {
+        "name": "Canister Grasping",
+        "value": "cg_process"
+        }
+    ],
+    "episodes": [  
+        {
+        "name": "Canister Insertion 29.11.23",
+        "value": "ci_process_291123"
+        },
+        {
+        "name": "Needle Insertion 29.11.23",
+        "value": "ni_process_291123"
+        },
+        {
+        "name": "Canister Grasping 29.11.23",
+        "value": "cg_process_291123"
+        },
+        {
+        "name": "Canister Insertion 17.02.25",
+        "value": "ci_process_170225"
+        },
+        {
+        "name": "Needle Insertion 17.02.25",
+        "value": "ni_process_170225"
+        },
+        {
+        "name": "Canister Grasping 23.05.22",
+        "value": "cg_process_230523"
+        },
+        {
+        "name": "Canister Grasping 17.02.25",
+        "value": "cg_process_170225"
+        },
+        {
+        "name": "Tube Insertion 17.02.25",
+        "value": "ti_process_170225"
+        },
+        {
+        "name": "Bottle Insertion 17.02.25",
+        "value": "bi_process_170225"
+        },
+        {
+        "name": "Canister Insertion 01.06.24",
+        "value": "ci_process_010624"
+        }
+    ],
+    "queries": [  
+        {
+        "name": "Replay Episode",
+        "value": "episode"
+        },
+        {
+        "name": "Inspect Narrative",
+        "value": "narrative"
+        },
+        {
+        "name": "Inspect Experience",
+        "value": "experience"
+        },
+        {
+        "name": "Generate Audit Trail",
+        "value": "trail"
+        },
+        {
+        "name": "Download Episode",
+        "value": "download"
+        }
+    ]
+  },
+  "actions": [
+   
+    {
+      "name": "Execute Query",
+      "value": "run",
+      "description": "Execute query on Binderhub.",
+      "primary": true,
+      "url": "nnkjk",
+      "options": [
+        "environments",
+        "robots",
+        "tasks",
+        "episodes",
+        "queries"
+      ],
+      "available": {
+        "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=episode": "",
+        "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=narrative": "",
+        "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=experience": "",
+        "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=download": "",
+        "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=trail": "",
+
+        "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ci_process|episodes=ci_process_291123|queries=episode": "",
+        "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ni_process|episodes=ni_process_291123|queries=episode": "",
+        "environments=tracebot_lab|robots=robotiq_tracebot|tasks=cg_process|episodes=cg_process_291123|queries=episode": "",
+        
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=episode": "https://mybinder.org/v2/gh/fkenghagho/NeemHub.git/HEAD?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2Ftracy.ipynb",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=narrative": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=experience": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=download": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=trail": "",
+        
+        
+        
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ni_process|episodes=ni_process_170225|queries=episode": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=cg_process|episodes=cg_process_170225|queries=episode": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ti_process|episodes=ti_process_170225|queries=episode": "",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=bi_process|episodes=bi_process_170225|queries=episode": "",
+        
+        "environments=aicor_uob_lab|robots=tracy|tasks=ci_process|episodes=ci_process_010624|queries=episode": "https://binder.intel4coro.de/v2/gh/yxzhan/giskard-examples/main?labpath=notebooks/tracy.ipynb"
+        
+      }
+    } 
+  ]
+}
+
+
+
+
+
+
