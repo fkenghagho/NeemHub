@@ -68,6 +68,10 @@
         "value": "ci_process_291123"
         },
         {
+        "name": "Canister Insertion 28.11.23",
+        "value": "ci_process_281123"
+        },
+        {
         "name": "Needle Insertion 29.11.23",
         "value": "ni_process_291123"
         },
@@ -100,8 +104,16 @@
         "value": "bi_process_170225"
         },
         {
-        "name": "Canister Insertion 01.06.24",
-        "value": "ci_process_010624"
+        "name": "Ignored",
+        "value": "empty"
+        },
+        {
+        "name": "Canister Insertion 21.11.24",
+        "value": "ci_process_211124"
+        },
+        {
+        "name": "Needle Insertion 21.11.24",
+        "value": "ni_process_211124"
         }
     ],
     "queries": [  
@@ -124,6 +136,9 @@
         {
         "name": "Download Episode",
         "value": "download"
+        }, {
+        "name": "Program Episode",
+        "value": "program"
         }
     ]
   },
@@ -150,23 +165,33 @@
         "environments=apartment|robots=pr2|tasks=cg_process|episodes=cg_process_230523|queries=trail": "",
 
         "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ci_process|episodes=ci_process_291123|queries=episode": "",
+        "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ci_process|episodes=ci_process_281123|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_281123.pdf",
+        "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ci_process|episodes=ci_process_291123|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_291123.pdf",
+        
         "environments=tracebot_lab|robots=robotiq_tracebot|tasks=ni_process|episodes=ni_process_291123|queries=episode": "",
+        
         "environments=tracebot_lab|robots=robotiq_tracebot|tasks=cg_process|episodes=cg_process_291123|queries=episode": "",
         
-        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=episode": "https://mybinder.org/v2/gh/fkenghagho/NeemHub.git/HEAD?urlpath=%2Fdoc%2Ftree%2Fnotebooks%2Ftracy.ipynb",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=episode": "https://binder.intel4coro.de/v2/gh/yxzhan/giskard-examples/main?labpath=notebooks/tracy.ipynb",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=narrative": "",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=experience": "",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=download": "",
-        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=trail": "",
         
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_ci_170225.pdf",
         
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_211124|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_ci_211124.pdf",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ni_process_170225|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_ni_170225.pdf",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_170225|queries=trail": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=TRACEBOT-NEEMS/audit_trail_ci_170225.pdf",
+        
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ni_process_211124|queries=experience": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=notebooks/ni_experience.ipynb",
+        "environments=tracebot_lab|robots=cea_tracebot|tasks=ci_process|episodes=ci_process_211124|queries=experience": "https://binder.intel4coro.de/v2/gh/fkenghagho/NeemHub/HEAD?labpath=notebooks/ci_experience.ipynb",
         
         "environments=tracebot_lab|robots=cea_tracebot|tasks=ni_process|episodes=ni_process_170225|queries=episode": "",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=cg_process|episodes=cg_process_170225|queries=episode": "",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=ti_process|episodes=ti_process_170225|queries=episode": "",
         "environments=tracebot_lab|robots=cea_tracebot|tasks=bi_process|episodes=bi_process_170225|queries=episode": "",
         
-        "environments=aicor_uob_lab|robots=tracy|tasks=ci_process|episodes=ci_process_010624|queries=episode": "https://binder.intel4coro.de/v2/gh/yxzhan/giskard-examples/main?labpath=notebooks/tracy.ipynb"
+        "environments=aicor_uob_lab|robots=tracy|tasks=ci_process|episodes=empty|queries=program": "https://binder.intel4coro.de/v2/gh/yxzhan/giskard-examples/main?labpath=notebooks/tracy.ipynb"
         
       }
     } 
