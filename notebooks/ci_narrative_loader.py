@@ -64,6 +64,20 @@ class NarrativeInspector():
             'Mesh_Canister_QUNRCLSD':{
                 'has_url':'https://github.com/fkenghagho/NeemHub/raw/refs/heads/main/TRACEBOT-NEEMS/canister.obj',
                 'display': True
+            },
+            'Canister_QUNRCLSD-CEA_GRIPPER_TEFHZXUW':{
+                'involves': 'Canister_QUNRCLSD_1',
+                'involves': 'CEA_GRIPPER_TEFHZXUW_1'   
+            },
+            'CEA_GRIPPER_TEFHZXUW_1':{
+                'grasps': 'Canister_QUNRCLSD_1'
+            },
+            'Canister_QUNRCLSD-DrainTray_PTYVBHGF':{
+                'involves': 'Canister_QUNRCLSD_1',
+                'involves': 'DrainTray_PTYVBHGF_1'   
+            },
+            'DrainTray_PTYVBHGF_1':{
+                'holds': 'Canister_QUNRCLSD_1'
             }
         }
         self.SELECTED_ITEM=''
