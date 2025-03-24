@@ -2,7 +2,7 @@ from pyvis.network import Network
 import networkx as nx
 import time
 import ipywidgets as widgets
-from IPython.display import display
+from IPython.display import display, HTML,IFrame
 import webbrowser
 
 
@@ -134,17 +134,21 @@ class NarrativeInspector():
                     nt.options['physics']['enabled'] = False
                 else:
                     nt.options['physics']['enabled'] = True
-            graphText = nt.generate_html()
-            graphText = graphText.replace('<div class="card" style="width: 100%">', '<div class="card" style="width: 100%;height: 100%">')
+            self.graphText = nt.generate_html()
+            self.graphText = self.graphText.replace('<div class="card" style="width: 100%">', '<div class="card" style="width: 100%;height: 100%">')
             f = open("nx.html", "w")
-            #print(graphText)
-            f.write(graphText)
+            #print(self.graphText)
+            f.write(self.graphText)
             f.close()
-            webbrowser.open("nx.html")
+            self.show()
         return False
-
+    
+    def show(self):
+        display(IFrame('nx.html', width=1000, height=700))
+        
     def load(self):
         self.update_ontology_frame([['2','2','5']],[])
+        self.show()
 
     def generate_options(self):
     
@@ -157,14 +161,16 @@ class NarrativeInspector():
         
         display(self.icategoryW)
         display(self.iitemW)
-        
+        """
         self.button_inspect = widgets.Button(description = 'Inspect')   
         self.button_inspect.on_click(self.clicked)
         display(self.button_inspect)
+        """
 
     def clicked(self,arg):
         print(str(arg))
         self.load()
+        self.show()
 
     def get_item(self,item):
         self.SELECTED_ITEM=item
