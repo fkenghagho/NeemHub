@@ -67,6 +67,8 @@ COPY --chown=${NB_USER}:users . /home/${NB_USER}/giskard_examples
 WORKDIR /home/${NB_USER}/giskard_examples
 RUN git config --global --add safe.directory ${PWD}
 RUN ln -s ${ROS_WS} ${PWD}/ROS_WS
+RUN pip install pyvis==0.3.2
+RUN pip install networkx==3.1
 COPY --chown=${NB_USER}:users binder/webapps.json ${ROS_WS}/src/rvizweb/webapps/app.json
 COPY --chown=${NB_USER}:users binder/entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
