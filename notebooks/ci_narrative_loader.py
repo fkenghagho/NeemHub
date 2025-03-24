@@ -62,7 +62,7 @@ class NarrativeInspector():
                 'has_height': '12.3cm'
             },
             'Mesh_Canister_QUNRCLSD':{
-                'has_url':'https://github.com/fkenghagho/NeemHub/raw/refs/heads/main/TRACEBOT-NEEMS/canister.obj',
+                'has_url':'https://github.com/fkenghagho/NeemHub/raw/refs/heads/main/TRACEBOT-NEEMS/Canister.obj',
                 'display': True
             },
             'Canister_QUNRCLSD-CEA_GRIPPER_TEFHZXUW':{
