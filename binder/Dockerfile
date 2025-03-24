@@ -57,8 +57,10 @@ USER ${NB_USER}
 RUN cd qpSWIFT/python && python setup.py install
 
 # Build ROS workspace
-WORKDIR  ${ROS_WS}
-RUN catkin build
+WORKDIR  ${ROS_WS}/src
+RUN git clone https://github.com/fkenghagho/urdf_models.git \
+    && cd .. \
+    && catkin build
 
 # Copy the giskard tmp meshes to skip the converting step
 COPY --chown=${NB_USER}:users binder/giskard_decomposed_obj ${ROS_WS}/src/giskardpy/tmp
