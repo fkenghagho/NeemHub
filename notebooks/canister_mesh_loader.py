@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 import open3d as o3d
-import rospy
-import time
-from utils import open_desktop, open_rvizweb, run_command, create_marker, publish_marker_array, TracyDemo
-from std_msgs.msg import ColorRGBA
-import random
-
 
 def load():
     #Load the mesh from a file
