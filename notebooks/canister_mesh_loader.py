@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import open3d as o3d
 
 
@@ -18,3 +19,6 @@ def load():
     """
     #Display the mesh before applying any texture
     o3d.visualization.draw_geometries([mesh], mesh_show_wireframe=True)
+
+if __name__ == '__main__':
+    load()
