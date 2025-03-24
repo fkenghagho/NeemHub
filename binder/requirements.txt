@@ -1,0 +1,4 @@
+#python package requirements
+
+pyvis==0.3.2
+networkx==3.1
