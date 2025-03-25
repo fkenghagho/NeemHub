@@ -62,7 +62,7 @@ RUN git clone https://github.com/fkenghagho/urdf_models.git \
     && cd .. \
     && catkin build
     
-ADD https://nc.uni-bremen.de/index.php/s/mgeaWoD8b9xgsCC/download/Action_BJCWLHSN.bag #adding bag file
+ADD https://nc.uni-bremen.de/index.php/s/mgeaWoD8b9xgsCC/download/Action_BJCWLHSN.bag  ../src #adding bag file
 
 # Copy the giskard tmp meshes to skip the converting step
 COPY --chown=${NB_USER}:users binder/giskard_decomposed_obj ${ROS_WS}/src/giskardpy/tmp
