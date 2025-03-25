@@ -140,14 +140,23 @@ class NarrativeInspector():
             #print(self.graphText)
             f.write(self.graphText)
             f.close()
-            self.show()
-        return False
+        return True
     
+    def build_graph(self, symbol):
+        if symbol in list(self.semantics_dict.keys()):
+            actual_result=[]
+            for key in self.semantics_dict[symbol].keys():
+                actual_result.append([symbol, key, self.semantics_dict[symbol][key]])
+                actual_result=actual_result+self.build_graph(self.semantics_dict[symbol][key])
+            return actual_result
+        else:
+            return []
+        
     def show(self):
         display(IFrame('nx.html', width=1000, height=700))
         
     def load(self):
-        self.update_ontology_frame([['2','2','5']],[])
+        self.update_ontology_frame(self.build_graph(self.SELECTED_ITEM),[])
         self.show()
 
     def generate_options(self):
@@ -161,19 +170,20 @@ class NarrativeInspector():
         
         display(self.icategoryW)
         display(self.iitemW)
-        """
+        
         self.button_inspect = widgets.Button(description = 'Inspect')   
         self.button_inspect.on_click(self.clicked)
         display(self.button_inspect)
-        """
+        
 
     def clicked(self,arg):
         print(str(arg))
         self.load()
-        self.show()
+        #self.show()
 
     def get_item(self,item):
         self.SELECTED_ITEM=item
+        print(self.SELECTED_ITEM)
 
     def select_item(self,category):
         self.SELECTED_CATEGORY=category

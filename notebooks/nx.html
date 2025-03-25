@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#FF7377", "id": "2", "label": "2", "shape": "dot", "size": 10}, {"color": "#FF7377", "id": "5", "label": "5", "shape": "dot", "size": 10}]);
-                  edges = new vis.DataSet([{"arrows": "to", "color": "#FF7377", "from": "2", "label": "2", "to": "5", "width": 1}]);
+                  nodes = new vis.DataSet([{"color": "#FF7377", "id": "Canister_QUNRCLSD-DrainTray_PTYVBHGF", "label": "Canister_QUNRCLSD-DrainTray_PTYVBHGF", "shape": "dot", "size": 10}, {"color": "#FF7377", "id": "DrainTray_PTYVBHGF_1", "label": "DrainTray_PTYVBHGF_1", "shape": "dot", "size": 10}, {"color": "#FF7377", "id": "Canister_QUNRCLSD_1", "label": "Canister_QUNRCLSD_1", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "#FF7377", "from": "Canister_QUNRCLSD-DrainTray_PTYVBHGF", "label": "involves", "to": "DrainTray_PTYVBHGF_1", "width": 1}, {"arrows": "to", "color": "#FF7377", "from": "DrainTray_PTYVBHGF_1", "label": "holds", "to": "Canister_QUNRCLSD_1", "width": 1}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
