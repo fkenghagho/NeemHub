@@ -58,7 +58,7 @@ RUN cd qpSWIFT/python && python setup.py install
 
 # Build ROS workspace
 WORKDIR  ${ROS_WS}/src
-RUN git clone https://github.com/fkenghagho/urdf_models.git \
+RUN git clone https://github.com/fkenghagho/urdf_models.git -b devel \
     && cd .. \
     && catkin build
     
